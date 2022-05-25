@@ -50,7 +50,7 @@ RUN git config --global user.name "ashwinstr"
 
 EXPOSE 8080
 
-RUN git clone https://github.com/Anonymousx97/UX-jutsu /app/
+RUN git clone https://github.com/Anonymous-x97/UX-jutsu /app/
 
 RUN pip install --no-cache-dir -r requirements.txt
 
