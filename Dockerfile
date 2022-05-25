@@ -48,9 +48,9 @@ RUN git config --global user.name "ashwinstr"
 
 RUN git clone https://github.com/Anonymousx97/UX-jutsu app
 
-WORKDIR /app
+RUN cd app
 
 RUN pip install --no-cache-dir -r requirements.txt
 
 # command to run on container start
-CMD bash run
+CMD [ "bash", "./run" ]
