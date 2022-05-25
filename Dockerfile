@@ -46,9 +46,9 @@ RUN apt -qq update && apt -qq install -y --no-install-recommends \
 RUN git config --global user.email "ashwinstr@gmail.com"
 RUN git config --global user.name "ashwinstr"
 
-RUN git clone https://github.com/Anonymousx97/UX-jutsu app
+RUN git clone https://github.com/Anonymousx97/UX-jutsu /root/app
 
-RUN cd app
+WORKDIR /root/app
 
 RUN pip install --no-cache-dir -r requirements.txt
 
