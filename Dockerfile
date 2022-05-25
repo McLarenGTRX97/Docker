@@ -52,5 +52,7 @@ WORKDIR /root/app
 
 RUN pip install --no-cache-dir -r requirements.txt
 
+ENV PATH="/home/app/bin:$PATH"
+
 # command to run on container start
 CMD [ "bash", "./run" ]
