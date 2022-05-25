@@ -6,6 +6,8 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN sed -i.bak 's/us-west-2\.ec2\.//' /etc/apt/sources.list
 
+WORKDIR /app/
+
 RUN apt -qq update && apt -qq upgrade -y && \
     apt -qq install -y --no-install-recommends \
     apt-utils \
@@ -48,9 +50,7 @@ RUN git config --global user.name "ashwinstr"
 
 EXPOSE 8080
 
-RUN git clone https://github.com/Anonymousx97/UX-jutsu app
-
-WORKDIR /app/
+RUN git clone https://github.com/Anonymousx97/UX-jutsu /app/
 
 RUN pip install --no-cache-dir -r requirements.txt
 
