@@ -46,7 +46,7 @@ RUN apt -qq update && apt -qq install -y --no-install-recommends \
 RUN git config --global user.email "ashwinstr@gmail.com"
 RUN git config --global user.name "ashwinstr"
 
-RUN git clone https://github.com/Anonymous-x97/UX-jutsu /root/app
+RUN git clone https://github.com/anonymous-x97/UX-jutsu /root/app
 
 WORKDIR /root/app
 
