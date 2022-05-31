@@ -41,6 +41,8 @@ RUN apt -qq update && apt -qq install -y --no-install-recommends \
     libfreetype6-dev libjpeg-dev libpng-dev libgif-dev libwebp-dev && \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives /tmp/*
 
+RUN python -m pip install --upgrade pip
+
 
 # adding email and username to the bot
 RUN git config --global user.email "ashwinstr@gmail.com"
@@ -49,8 +51,6 @@ RUN git config --global user.name "ashwinstr"
 RUN git clone https://github.com/anonymous-x97/UX-jutsu /root/app
 
 WORKDIR /root/app
-
-RUN pip install -U pip
 
 RUN pip install --no-cache-dir -r requirements.txt
 
