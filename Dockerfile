@@ -43,6 +43,8 @@ RUN apt -qq update && apt -qq install -y --no-install-recommends \
 
 RUN python -m pip install --upgrade pip
 
+RUN python -m pip install --upgrade setuptools
+
 
 # adding email and username to the bot
 RUN git config --global user.email "ashwinstr@gmail.com"
