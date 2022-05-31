@@ -50,6 +50,8 @@ RUN git clone https://github.com/anonymous-x97/UX-jutsu /root/app
 
 WORKDIR /root/app
 
+RUN pip install -U pip
+
 RUN pip install --no-cache-dir -r requirements.txt
 
 # command to run on container start
