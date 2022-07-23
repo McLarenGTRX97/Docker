@@ -4,11 +4,8 @@ FROM ghcr.io/anonymousx97/build_essentials:main
 RUN git config --global user.email "ashwinstr@gmail.com"
 RUN git config --global user.name "ashwinstr"
 
-RUN git clone https://github.com/anonymous-x97/UX-jutsu ux
+EXPOSE 8080
 
-WORKDIR ux
+COPY start .
 
-RUN pip install --no-cache-dir -r requirements.txt
-
-# command to run on container start
-CMD [ "bash", "./run" ]
+CMD ["bash", "./start" ]
