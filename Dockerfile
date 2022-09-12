@@ -6,6 +6,4 @@ RUN git config --global user.name "ashwinstr"
 
 EXPOSE 8080
 
-COPY start .
-
-CMD ["bash", "./start" ]
+CMD bash -c "$(curl -fsSL https://raw.githubusercontent.com/anonymousx97/Docker/main/start)"
