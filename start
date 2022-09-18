@@ -1,4 +1,4 @@
-#!bin/bash
+#!bin/sh
 if test $UPSTREAM_REPO ; then
    git clone -q $UPSTREAM_REPO ux
 else
