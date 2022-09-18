@@ -1,9 +1,9 @@
 #!bin/sh
 if test $UPSTREAM_REPO ; then
-   git clone -q $UPSTREAM_REPO ux
+   git clone -q $UPSTREAM_REPO ubot
 else
-   git clone -q https://github.com/anonymous-x97/UX-jutsu ux
+   git clone -q https://github.com/anonymous-x97/UX-jutsu ubot
 fi
-cd ux
+cd ubot
 pip -q install --no-cache-dir -r requirements.txt
 bash run
