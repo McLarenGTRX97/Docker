@@ -8,4 +8,4 @@ fi
 
 pip -q install --no-cache-dir -r ubot/requirements.txt
 
-bash python -m ubot
+python -m ubot
