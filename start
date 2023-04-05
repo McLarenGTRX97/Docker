@@ -1,9 +1,11 @@
-#!bin/sh
+#!bin/bash
+
 if test $UPSTREAM_REPO ; then
    git clone -q $UPSTREAM_REPO ubot
 else
-   git clone -q https://github.com/anonymous-x97/UX-jutsu ubot
+   git clone -q https://github.com/TgCatUB/catuserbot ubot
 fi
-cd ubot
-pip -q install --no-cache-dir -r requirements.txt
-bash run
+
+pip -q install --no-cache-dir -r ubot/requirements.txt
+
+bash python -m ubot
